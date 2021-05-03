@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'DrawerOnly.dart';
 
 class CocoMelonBabyPage extends StatelessWidget {
@@ -9,7 +10,6 @@ class CocoMelonBabyPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('CoComelonBaby'),
         ),
-        body: ListView()
-    );
+        body: ListView());
   }
 }

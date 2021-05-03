@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'DrawerOnly.dart';
 
+import 'DrawerOnly.dart';
 
 class PuksiirautoTomPage extends StatelessWidget {
   @override
@@ -10,7 +10,6 @@ class PuksiirautoTomPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Puksiirauto Tom'),
         ),
-        body: ListView()
-    );
+        body: ListView());
   }
 }
