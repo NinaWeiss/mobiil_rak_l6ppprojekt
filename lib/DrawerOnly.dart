@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobiil_rak_l6ppprojekt/Pages/BlippiPage.dart';
+import 'package:mobiil_rak_l6ppprojekt/Pages/HipPoPopPage.dart';
 import 'package:mobiil_rak_l6ppprojekt/Pages/MashaAndTheBearPage.dart';
 import 'package:mobiil_rak_l6ppprojekt/Pages/TeletubbiesPage.dart';
 
@@ -106,6 +107,19 @@ class DrawerOnly extends StatelessWidget {
                 ctxt,
                 new MaterialPageRoute(
                     builder: (ctxt) => new TeletubbiesPage()));
+          },
+        ),
+        new ListTile(
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://images-na.ssl-images-amazon.com/images/I/61SIB6fA0UL._AC_SL1500_.jpg'),
+          ),
+          title: new Text("HipPo-Pop"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+            Navigator.pop(ctxt);
+            Navigator.push(ctxt,
+                new MaterialPageRoute(builder: (ctxt) => new HipPoPopPage()));
           },
         ),
       ],
