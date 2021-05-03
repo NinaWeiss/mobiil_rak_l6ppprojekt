@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobiil_rak_l6ppprojekt/Pages/BlippiPage.dart';
+import 'package:mobiil_rak_l6ppprojekt/Pages/MashaAndTheBearPage.dart';
+import 'package:mobiil_rak_l6ppprojekt/Pages/TeletubbiesPage.dart';
 
 import 'CocoMelonBabyPage.dart';
 import 'PuksiirautoTomPage.dart';
@@ -61,7 +64,50 @@ class DrawerOnly extends StatelessWidget {
                 new MaterialPageRoute(
                     builder: (ctxt) => new CocoMelonBabyPage()));
           },
-        )
+        ),
+        new ListTile(
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://i.pinimg.com/originals/ba/83/03/ba8303a081e280f20310350a7b44f416.jpg'),
+          ),
+          title: new Text("Masha ja Karu"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+            Navigator.pop(ctxt);
+            Navigator.push(
+                ctxt,
+                new MaterialPageRoute(
+                    builder: (ctxt) => new MashaAndTheBearPage()));
+          },
+        ),
+        new ListTile(
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://cdn.shopify.com/s/files/1/2794/3840/files/Blippi_About_600x600@2x.jpg?v=1600436608'),
+          ),
+          title: new Text("Blippi"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+            Navigator.pop(ctxt);
+            Navigator.push(ctxt,
+                new MaterialPageRoute(builder: (ctxt) => new BlippiPage()));
+          },
+        ),
+        new ListTile(
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://yt3.ggpht.com/ytc/AAUvwnhi-Nvd2hJvzHBe4QneQ7YKDLE7OVQP__zHLW3ApQ=s900-c-k-c0x00ffffff-no-rj'),
+          ),
+          title: new Text("Teletubbies"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {
+            Navigator.pop(ctxt);
+            Navigator.push(
+                ctxt,
+                new MaterialPageRoute(
+                    builder: (ctxt) => new TeletubbiesPage()));
+          },
+        ),
       ],
     ));
   }
