@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'DrawerOnly.dart';
 
 void main() {
@@ -15,15 +14,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: new MyHomePage(ctxt),
+      home: new MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  var cameras;
 
-  MyHomePage(this.cameras);
+  MyHomePage();
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -53,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage>
     return Scaffold(
       drawer: new DrawerOnly(),
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Kiddify'),
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: Colors.white,
@@ -65,7 +63,10 @@ class _MyHomePageState extends State<MyHomePage>
       ),
       body: new TabBarView(
         controller: _tabController,
-        children: <Widget>[],
+        children: <Widget>[
+          Icon(Icons.home),
+          Icon(Icons.wallpaper)
+        ],
       ),
     );
   }
