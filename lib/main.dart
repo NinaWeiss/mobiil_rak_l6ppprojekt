@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import 'DrawerOnly.dart';
 
@@ -63,7 +66,87 @@ class _MyHomePageState extends State<MyHomePage>
       ),
       body: new TabBarView(
         controller: _tabController,
-        children: <Widget>[Icon(Icons.home), Icon(Icons.wallpaper)],
+        children: <Widget>[LandingScreen(), Icon(Icons.wallpaper)],
+      ),
+    );
+  }
+}
+
+class LandingScreen extends StatefulWidget {
+  @override
+  _LandingScreenState createState() => _LandingScreenState();
+}
+
+class _LandingScreenState extends State<LandingScreen> {
+  File imageFile = File('');
+
+  _openGallery(BuildContext context) async {
+    var picture = await ImagePicker().getImage(source: ImageSource.gallery);
+
+    this.setState(() {
+      imageFile = File(picture.path);
+    });
+
+    Navigator.of(context).pop();
+  }
+
+  _openCamera(BuildContext context) async {
+    // ignore: deprecated_member_use
+    var picture = await ImagePicker().getImage(source: ImageSource.camera);
+    this.setState(() {
+      imageFile = File(picture.path);
+    });
+    Navigator.of(context).pop();
+  }
+
+
+  Future<void> _showChoiceDialog(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  GestureDetector(
+                    child: Text("Gallery"),
+                    onTap: () {
+                      _openGallery(context);
+                    },
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  Widget _decideImageView() {
+    if (imageFile == null) {
+      return Text("No image selected");
+    } else {
+      return Image.file(imageFile, width: 200, height: 200);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              _decideImageView(),
+              RaisedButton(
+                onPressed: () {
+                  _showChoiceDialog(context);
+                },
+                child: Text("Select Image"),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
