@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'OpenGallery.dart';
 import 'DrawerOnly.dart';
+import 'Alphabet.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+
   MyHomePage();
 
   @override
@@ -63,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage>
       ),
       body: new TabBarView(
         controller: _tabController,
-        children: <Widget>[Icon(Icons.home), OpenGallery()],
+        children: <Widget>[Alphabet(), OpenGallery()],
       ),
     );
   }
