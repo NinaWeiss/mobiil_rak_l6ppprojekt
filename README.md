@@ -41,7 +41,7 @@ In older versions of Android Studio, you should instead launch Android Studio > 
 If you do not have a project open, you can choose Configure > AVD Manager and select Create Virtual Device…
 13. Choose a device definition and select Next.
 14. Select one or more system images for the Android versions you want to emulate, and select Next. An x86 or x86_64 image is recommended.
-15. Under Emulated Performance, select Hardware - GLES 2.0 to enable [hardware acceleration] (https://developer.android.com/studio/run/emulator-acceleration)
+15. Under Emulated Performance, select Hardware - GLES 2.0 to enable hardware acceleration https://developer.android.com/studio/run/emulator-acceleration
 16. Verify the AVD configuration is correct, and select Finish.
 17. In Android Virtual Device Manager, click Run in the toolbar. The emulator starts up and displays the default canvas for your selected OS version and device.
 
@@ -62,4 +62,4 @@ If you do not have a project open, you can choose Configure > AVD Manager and se
 
 # Installing Flutter for Mac
 
-[Click here to see how to install Flutter for Mac] (https://flutter.dev/docs/get-started/install/macos)
+Click on the following link to see how to install Flutter for Mac https://flutter.dev/docs/get-started/install/macos
