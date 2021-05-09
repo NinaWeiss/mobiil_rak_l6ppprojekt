@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoScreen extends StatefulWidget {
-
   final String id;
 
   VideoScreen({required this.id});
@@ -13,7 +12,6 @@ class VideoScreen extends StatefulWidget {
 }
 
 class _VideoScreenState extends State<VideoScreen> {
-
   late YoutubePlayerController _controller;
 
   @override

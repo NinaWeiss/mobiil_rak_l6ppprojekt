@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'DrawerOnly.dart';
 
 void main() {
@@ -20,7 +21,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-
   MyHomePage();
 
   @override
@@ -63,10 +63,7 @@ class _MyHomePageState extends State<MyHomePage>
       ),
       body: new TabBarView(
         controller: _tabController,
-        children: <Widget>[
-          Icon(Icons.home),
-          Icon(Icons.wallpaper)
-        ],
+        children: <Widget>[Icon(Icons.home), Icon(Icons.wallpaper)],
       ),
     );
   }
