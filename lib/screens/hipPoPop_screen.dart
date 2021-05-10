@@ -24,7 +24,7 @@ class _HipPoPopScreenState extends State<HipPoPopScreen>{
 
   _initChannel() async {
     Channel channel = await APIService.instance
-        .fetchChannel(channelId: 'UC61k2bW1N_FghUhJ21llIag');
+        .fetchChannel(channelId: 'UCjWVQ08WObJIQ24_3i7A3Gw');
     setState(() {
       _channel = channel;
     });
