@@ -54,7 +54,7 @@ Get the Flutter SDK:
 4. Click check out project from version control and select Git.
 5. Paste the URL of your project and select the desired directory location for your project. Then click clone button.
 6. Choose the existing project, because it has been downloaded to the location you created. After finding the location, click OK.
-7. When the project is open in android studio, you will get this errors. Click Get dependencies to install the packages.
+7. When the project is open in android studio, you will have to update dependencies. Click **Get dependencies** to install the packages.
 8. Start the application by running "main.dart"
 
 
