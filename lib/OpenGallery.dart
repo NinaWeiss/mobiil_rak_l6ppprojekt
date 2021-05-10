@@ -1,7 +1,8 @@
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:image_picker/image_picker.dart';
-import 'package:flutter/material.dart';
 import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class OpenGallery extends StatefulWidget {
   @override

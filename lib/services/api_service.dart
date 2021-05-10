@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:http/http.dart' as http;
 import 'package:mobiil_rak_l6ppprojekt/models/channel_model.dart';
 import 'package:mobiil_rak_l6ppprojekt/models/video_model.dart';
@@ -44,7 +45,8 @@ class APIService {
     }
   }
 
-  Future<List<Video>> fetchVideosFromPlaylist({required String playlistId}) async {
+  Future<List<Video>> fetchVideosFromPlaylist(
+      {required String playlistId}) async {
     Map<String, String> parameters = {
       'part': 'snippet',
       'playlistId': playlistId,
@@ -72,7 +74,7 @@ class APIService {
       // Fetch first eight videos from uploads playlist
       List<Video> videos = [];
       videosJson.forEach(
-            (json) => videos.add(
+        (json) => videos.add(
           Video.fromMap(json['snippet']),
         ),
       );
@@ -81,5 +83,4 @@ class APIService {
       throw json.decode(response.body)['error']['message'];
     }
   }
-
 }

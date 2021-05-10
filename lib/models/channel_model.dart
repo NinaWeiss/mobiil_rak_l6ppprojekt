@@ -1,7 +1,6 @@
 import 'package:mobiil_rak_l6ppprojekt/models/video_model.dart';
 
 class Channel {
-
   final String id;
   final String title;
   final String profilePictureUrl;
@@ -27,8 +26,8 @@ class Channel {
       profilePictureUrl: map['snippet']['thumbnails']['default']['url'],
       subscriberCount: map['statistics']['subscriberCount'],
       videoCount: map['statistics']['videoCount'],
-      uploadPlaylistId: map['contentDetails']['relatedPlaylists']['uploads'], videos: [],
+      uploadPlaylistId: map['contentDetails']['relatedPlaylists']['uploads'],
+      videos: [],
     );
   }
-
 }

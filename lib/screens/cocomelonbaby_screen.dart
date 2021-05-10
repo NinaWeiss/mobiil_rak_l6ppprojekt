@@ -8,11 +8,9 @@ import 'package:mobiil_rak_l6ppprojekt/services/api_service.dart';
 class CoCoMelonBabyScreen extends StatefulWidget {
   @override
   _CoCoMelonBabyScreenState createState() => _CoCoMelonBabyScreenState();
-
 }
 
-class _CoCoMelonBabyScreenState extends State<CoCoMelonBabyScreen>{
-
+class _CoCoMelonBabyScreenState extends State<CoCoMelonBabyScreen> {
   late Channel _channel;
   bool _isLoading = false;
 
@@ -138,33 +136,33 @@ class _CoCoMelonBabyScreenState extends State<CoCoMelonBabyScreen>{
       ),
       body: _channel != null
           ? NotificationListener<ScrollNotification>(
-        onNotification: (ScrollNotification scrollDetails) {
-          if (!_isLoading &&
-              _channel.videos.length != int.parse(_channel.videoCount) &&
-              scrollDetails.metrics.pixels ==
-                  scrollDetails.metrics.maxScrollExtent) {
-            _loadMoreVideos();
-          }
-          return false;
-        },
-        child: ListView.builder(
-          itemCount: 1 + _channel.videos.length,
-          itemBuilder: (BuildContext context, int index) {
-            if (index == 0) {
-              return _buildProfileInfo();
-            }
-            Video video = _channel.videos[index - 1];
-            return _buildVideo(video);
-          },
-        ),
-      )
+              onNotification: (ScrollNotification scrollDetails) {
+                if (!_isLoading &&
+                    _channel.videos.length != int.parse(_channel.videoCount) &&
+                    scrollDetails.metrics.pixels ==
+                        scrollDetails.metrics.maxScrollExtent) {
+                  _loadMoreVideos();
+                }
+                return false;
+              },
+              child: ListView.builder(
+                itemCount: 1 + _channel.videos.length,
+                itemBuilder: (BuildContext context, int index) {
+                  if (index == 0) {
+                    return _buildProfileInfo();
+                  }
+                  Video video = _channel.videos[index - 1];
+                  return _buildVideo(video);
+                },
+              ),
+            )
           : Center(
-        child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(
-            Theme.of(context).primaryColor, // Red
-          ),
-        ),
-      ),
+              child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  Theme.of(context).primaryColor, // Red
+                ),
+              ),
+            ),
     );
   }
 }

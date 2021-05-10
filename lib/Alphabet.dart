@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Alphabet extends StatelessWidget {
-
   List<String> images = [
     "https://www.anglomaniacy.pl/img/a-for-alligator.png",
     "https://www.anglomaniacy.pl/img/b-for-bear.png",
@@ -29,29 +28,21 @@ class Alphabet extends StatelessWidget {
     "https://www.anglomaniacy.pl/img/x-in-fox.png",
     "https://www.anglomaniacy.pl/img/y-for-yak.png",
     "https://www.anglomaniacy.pl/img/z-for-zebra.png",
-
-
-
-
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-            padding: EdgeInsets.all(12.0),
-            child: GridView.builder(
-              itemCount: images.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 8.0,
-                  mainAxisSpacing: 4.0
-              ),
-              itemBuilder: (BuildContext context, int index){
-                return Image.network(images[index]);
-              },
-            )),
-
+      body: Container(
+          padding: EdgeInsets.all(12.0),
+          child: GridView.builder(
+            itemCount: images.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, crossAxisSpacing: 8.0, mainAxisSpacing: 4.0),
+            itemBuilder: (BuildContext context, int index) {
+              return Image.network(images[index]);
+            },
+          )),
     );
   }
 }
