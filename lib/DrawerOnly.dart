@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobiil_rak_l6ppprojekt/screens/blippi_screen.dart';
+import 'package:mobiil_rak_l6ppprojekt/screens/booba_screen.dart';
 import 'package:mobiil_rak_l6ppprojekt/screens/cocomelonbaby_screen.dart';
 import 'package:mobiil_rak_l6ppprojekt/screens/hipPoPop_screen.dart';
 import 'package:mobiil_rak_l6ppprojekt/screens/mascha_and_the_bear_screen.dart';
@@ -46,6 +47,19 @@ class DrawerOnly extends StatelessWidget {
             Navigator.pop(ctxt);
             Navigator.push(ctxt,
                 new MaterialPageRoute(builder: (ctxt) => new BlippiScreen()));
+          },
+        ),
+        new ListTile(
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://yt3.ggpht.com/ytc/AAUvwnixBbffR8ApItSLv9BYRRjEl4zn_UKMdBYUPdL9cA=s88-c-k-c0x00ffffff-no-rj'),
+          ),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          title: new Text("Booba"),
+          onTap: () {
+            Navigator.pop(ctxt);
+            Navigator.push(ctxt,
+                new MaterialPageRoute(builder: (ctxt) => new BoobaScreen()));
           },
         ),
         new ListTile(
