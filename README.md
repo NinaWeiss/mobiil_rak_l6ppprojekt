@@ -68,11 +68,12 @@ Click on the following link to see how to install Flutter for Mac https://flutte
 1. environment:
   sdk: ">=2.12.0 <3.0.0"
 2. dependencies:
-  image_picker:
-  flutter:
-    sdk: flutter
-  cupertino_icons: ^1.0.2
-  http: ^0.12.0+2
-  youtube_player_flutter: ^6.0.3+2
+  2.1 image_picker:
+  2.2 flutter:
+  2.3 sdk: flutter
+  2.4 cupertino_icons: ^1.0.2
+  2.5 http: ^0.12.0+2
+  2.6 youtube_player_flutter: ^6.0.3+2
+
 3. API:
    YouTube Data API v3
