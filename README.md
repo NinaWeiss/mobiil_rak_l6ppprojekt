@@ -9,14 +9,14 @@ The creators of the application: Mihkel Joll, Nina Katarina Weiss, Oliver Kobing
 
 # STEP 1: Installing Flutter for Windows
 
-System requirements:
+**System requirements:**
 * Operating Systems: Windows 7 SP1 or later (64-bit), x86-64 based
 * Disk Space: 1.64 GB (does not include disk space for IDE/tools).
 * Tools: Flutter depends on these tools being available in your environment.
 - Windows PowerShell 5.0 or newer (this is pre-installed with Windows 10)
 - Git for Windows 2.x, with the Use Git from the Windows Command Prompt option.
 
-Get the Flutter SDK:
+**Get the Flutter SDK:**
 
 1. Install latest Flutter SDK from the following page https://flutter.dev/docs/get-started/install/windows
 2. Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (for example, C:\src\flutter).
