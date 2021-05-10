@@ -44,7 +44,7 @@ Get the Flutter SDK:
 16. Verify the AVD configuration is correct, and select Finish.
 17. In Android Virtual Device Manager, click Run in the toolbar. The emulator starts up and displays the default canvas for your selected OS version and device.
 
-# STEP 2: Setting up an editor and uploading Kiddify from GitHub
+# STEP 2: Setting up an editor and downloading Kiddify from GitHub
 
 1. Open Android Studio
 2. Install Flutter and Dart plugins
